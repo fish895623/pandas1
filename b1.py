@@ -1,8 +1,4 @@
-import numpy as np
-import networkx as nx
+import pandas as pd
 
-G = nx.karate_club_graph()
-degree = [d for n, d in G.degree()]
-nx.draw(G, with_labels=True)
-a = G.degree()
-print(a)
+
+df = pd.DataFrame('../')
