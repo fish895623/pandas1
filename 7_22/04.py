@@ -161,6 +161,21 @@ plt.ylabel("Loss")
 plt.legend()
 plt.show()
 
+
+# %%
+def evaluate_naive_method():
+    batch_maes = []
+    for step in range(val_steps):
+        samples, targets = next(val_gen)
+        preds = samples[:, -1, 1]
+        mae = np.mean(np.abs(preds - targets))
+        batch_maes.append(mae)
+    print(np.mean(batch_maes))
+
+
+evaluate_naive_method()
+
+
 # %%
 0.29 * std[1]
 
