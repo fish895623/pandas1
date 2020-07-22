@@ -112,7 +112,3 @@ model.predict(x_test[:10])
 
 # %%
 print(y_test[:10])
-
-
-# %%
-
