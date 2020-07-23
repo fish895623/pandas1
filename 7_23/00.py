@@ -1,1 +1,2 @@
 aa = "aaaaaa"
+print(aa)
