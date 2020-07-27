@@ -27,3 +27,20 @@ print("Predicted:", vgg16.decode_predictions(preds, top=3)[0])
 image = plt.imread("cat_dog.jpg")
 plt.imshow(image)
 plt.show()
+
+# %% [markdown]
+file = "dog.jpg"
+cat_dog = preprocess_image(file, target_size=(224, 224))
+preds = base_model.predict(cat_dog)
+print("Predicted:", vgg16.decode_predictions(preds, top=3)[0])
+image = plt.imread(file)
+plt.imshow(image)
+plt.show()
+# %% [markdown]
+file = "mal.jpg"
+cat_dog = preprocess_image(file, target_size=(224, 224))
+preds = base_model.predict(cat_dog)
+print("Predicted:", vgg16.decode_predictions(preds, top=3)[0])
+image = plt.imread(file)
+plt.imshow(image)
+plt.show()
