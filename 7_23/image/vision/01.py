@@ -27,11 +27,14 @@ print(img[100, 100])
 img[100, 101] = [255, 255, 255]
 img[99, 101] = [255, 255, 255]
 img[100:100, 200:200] = [255, 255, 255]
+img[100:100, 500:200] = [255, 255, 255]
 
 
-if k == 27:  # wait for ESC key to exit
+if k == 27:
+    # wait for ESC key to exit
     cv2.destroyAllWindows()
-elif k == ord("s"):  # wait for 's' key to save and exit
+elif k == ord("s"):
+    # wait for 's' key to save and exit
     cv2.imwrite("messigray.png", img)
     cv2.destroyAllWindows()
 
