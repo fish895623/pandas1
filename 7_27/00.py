@@ -1,11 +1,7 @@
 # %%
 from __future__ import print_function
 import numpy as np
-import os
 import time
-
-os.environ["KERAS_BACKEND"] = "plaidml.keras.backend"
-
 import keras
 import keras.applications as kapp
 from keras.datasets import cifar10
@@ -14,10 +10,11 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 from keras import backend as K
+
 import os
 
-
 os.environ["KERAS_BACKEND"] = "plaidml.keras.backend"
+
 # %% [markdown]
 
 batch_size = 128
